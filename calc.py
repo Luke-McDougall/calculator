@@ -87,21 +87,3 @@ def next_prime(n):
 
 def lcm(x, y):
     return (x * y) / gcd(x, y)
-
-import random as r
-def random_pi():
-    in_circle = 0
-    out_circle = 0
-    for _ in range(10000):
-        x = r.random()
-        y = r.random()
-        if r.random() < 0.5:
-            x = -x
-        if r.random() < 0.5:
-            y = -y
-        if (x**2 + y**2)**0.5 > 1:
-            out_circle += 1
-        else:
-            in_circle += 1
-    ppi = (in_circle / (out_circle + in_circle)) * 4
-    print(ppi)
